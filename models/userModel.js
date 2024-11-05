@@ -1,0 +1,78 @@
+const mongoose = require('mongoose');
+
+const userSchema = new mongoose.Schema({
+    first_name:{
+        type:String,
+        required:true
+    },
+    last_name:{
+        type:String,
+        required:true
+    },
+    email:{
+        type:String,
+        required:true
+    },
+    number:{
+        type:Number,
+        required:true
+    },
+    age:{
+        type:Number,
+        required:true
+    },
+    height:{
+        type:Number,
+        required:true
+    },
+    weight:{
+        type:Number,
+        required:true
+    },
+    gender:{
+        type:String,
+        required:true
+    },
+    bloodg:{
+        type:String,
+        required:true
+    },
+    birth:{
+        type:String,
+        required:true
+    },
+    country:{
+        type:String,
+        required:true
+    },
+    state:{
+        type:String,
+        required:true
+    },
+    city:{
+        type:String,
+        required:true
+    },
+    address:{
+        type:String,
+        required:true
+    },
+    hospital:{
+        type:String,
+        required:true
+    },
+    password:{
+        type:String,
+        required:true
+    },
+    confirm_password:{
+        type:String,
+        required:true
+    },
+    role:{
+        type:Number,
+        default:0 // 0 = Patients || 1 = Doctor
+    },
+});
+
+module.exports = mongoose.model('User', userSchema);
